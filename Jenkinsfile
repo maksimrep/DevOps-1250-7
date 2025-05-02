@@ -12,7 +12,7 @@ pipeline {
         stage('Push repo to remote host') {
             steps {
                 echo 'Connect to remote host'
-                sh 'ssh -i ~/.ssh/id_rsa vagrant@192.168.100.101 sudo git -C /var/www/html pull'
+                sh 'ssh -i ~/.ssh/id_rsa vagrant@192.168.100.101 git -C /var/www/html pull'
             }
         }
     }
